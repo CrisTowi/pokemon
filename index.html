@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon list</title>
+</head>
+<body>
+  <div class="container">
+
+  </div>
+
+</body>
+<script type="text/javascript">
+  // Get the list of pokemon from the API
+  const getPokemonList = async () => {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const { results } = await response.json();
+    
+    return results;
+  }
+
+  const getPokemonFromId = async (id) => {
+    // Place your code here
+  }
+
+  const renderPokemonList = () => {
+    // Place your code here
+  }
+
+  getPokemonList()
+    .then(pokemon => {
+      console.log(pokemon);
+    });
+
+</script>
+</html>
